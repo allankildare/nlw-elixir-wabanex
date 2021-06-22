@@ -8,6 +8,7 @@ defmodule WabanexWeb.Router do
   scope "/api", WabanexWeb do
     pipe_through :api
 
+    # rota criada na raiz do projeto
     get "/", IMCController, :index
   end
 

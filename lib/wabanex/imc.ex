@@ -1,4 +1,6 @@
 defmodule Wabanex.IMC do
+  # funcao para manipulacao do calculo do IMC
+  # a partir da leitura de um arquivo e passando-o para a funcao handle_file()
   def calculate(%{"filename" => filename}) do
     filename
     |> File.read()
@@ -27,5 +29,6 @@ defmodule Wabanex.IMC do
     |> calculate_imc()
   end
 
+  # funcao para devolucao do calculo do IMC
   defp calculate_imc([name, height, weight]), do: {name, weight / (height * height)}
 end
